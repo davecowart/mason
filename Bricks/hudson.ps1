@@ -1,7 +1,7 @@
-function brick-create-config([string]$name, [string]$path) {
+function brick-create-hudson([string]$name, [string]$path) {
 	$config = Get-Content("$path\config.xml")
 	$config = $config -replace "{{NAME}}", $name
-	$config = $config -replace "{{USERNAME}}", "davecowart"
+	$config = $config -replace "{{USERNAME}}", "Intermark"
 	$url = "http://jaws:8080/createItem?name=$name"
 	
 	$webrequest = [System.Net.WebRequest]::Create($url)
