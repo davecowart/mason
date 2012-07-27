@@ -7,6 +7,8 @@ function mason([string]$name) {
 	$name = rename($name)
 	Write-Host "Laying the foundation for $name..."
 	. brick-create-project($name)
+	. brick-create-repo($name)
+	. brick-push-repo($name)
 }
 
 function rename([string]$name) {
