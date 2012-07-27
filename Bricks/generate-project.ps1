@@ -15,7 +15,7 @@ function brick-create-project([string]$name) {
 
 	mkdir $name
 	cd $name
-	git clone $repo .
+	git clone -q $repo .
 	rm -r -force .git
 	git init
 	git add .

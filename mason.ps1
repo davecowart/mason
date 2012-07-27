@@ -12,11 +12,11 @@ function mason([string]$name) {
 	. brick-create-folder "stgcomweb" $name "QA"
 	. brick-create-folder "stgcomweb" $name "UAT"
 	. brick-create-hudson $name $path 
-	. brick-create-database $name, $path, "DEV"
+	. brick-create-database $name $path "DEV"
 	Write-Host 
 	Write-Host 
 	Write-Host "Work Complete!" -foregroundcolor green
-	# . brick-play-complete-sound $path
+	. brick-play-complete-sound $path
 }
 
 function rename([string]$name) {
