@@ -9,6 +9,8 @@ function mason([string]$name) {
 	. brick-create-project($name)
 	. brick-create-repo($name)
 	. brick-push-repo($name)
+	. brick-create-folder "stgcomweb" $name "QA"
+	. brick-create-folder "stgcomweb" $name "UAT"
 }
 
 function rename([string]$name) {
