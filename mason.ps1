@@ -11,6 +11,7 @@ function mason([string]$name) {
 	. brick-push-repo($name)
 	. brick-create-folder "stgcomweb" $name "QA"
 	. brick-create-folder "stgcomweb" $name "UAT"
+	. brick-create-hudson $name $path 
 }
 
 function rename([string]$name) {
@@ -28,7 +29,3 @@ function load-bricks([string]$path) {
 }
 
 $path = Get-ScriptDirectory
-
-function test([string]$param1, [string]$param2) {
-	Write-Host $param1 $param2
-}
